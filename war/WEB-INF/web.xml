@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee                http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>batcave</servlet-name>
+		<servlet-class>com.batman.server.FriendlyUrl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>batcave</servlet-name>
+		<url-pattern>/batcave/home</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>batcave</servlet-name>
+		<url-pattern>/batcave/location</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>batcave</servlet-name>
+		<url-pattern>/batcave/account</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>batcave</servlet-name>
+		<url-pattern>/batcave/help</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CheckoutController</servlet-name>
+		<servlet-class>com.batman.server.CheckoutController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>CheckoutController</servlet-name>
+		<url-pattern>/batcave/checkout</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CartController</servlet-name>
+		<servlet-class>com.batman.server.CartController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>CartController</servlet-name>
+		<url-pattern>/batcave/cart</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StoreController</servlet-name>
+		<servlet-class>com.batman.server.StoreController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>StoreController</servlet-name>
+		<url-pattern>/batcave/store</url-pattern>
+	</servlet-mapping>
+
+	<!-- Default page to serve -->
+	<welcome-file-list>
+		<welcome-file>Batman.html</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+		<init-param>
+			<param-name>services</param-name>
+			<param-value/>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<url-pattern>/_ah/spi/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>

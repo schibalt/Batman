@@ -1,0 +1,37 @@
+.wp_syntax {
+	margin-bottom:8px;
+	overflow:auto;
+}
+.wp_syntax {
+	overflow-x:auto;
+	overflow-y:hidden;
+	padding-bottom:0;
+	width:100% !important;
+	width:99%;
+}
+.wp_syntax table {
+	border-collapse:collapse;
+}
+.wp_syntax div, .wp_syntax td {
+	vertical-align:top;
+	padding:2px 4px;
+}
+.wp_syntax .line_numbers {
+	text-align:right;
+	overflow:visible;
+}
+.wp_syntax pre {
+	border:none;
+	background:none;
+	margin:0;
+	padding:0;
+	width:auto;
+	float:none;
+	clear:none;
+	overflow:visible;
+	font-size:12px;
+	line-height:1.333;
+}
+.line_numbers pre {
+	padding-left:5px;
+}

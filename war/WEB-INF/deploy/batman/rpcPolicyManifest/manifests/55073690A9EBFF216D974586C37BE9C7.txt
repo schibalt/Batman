@@ -1,0 +1,2 @@
+serviceClass: com.batman.client.GreetingService
+path: DC1AA62FABD2C7DEB97C6176AFA910F1.gwt.rpc

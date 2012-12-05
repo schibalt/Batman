@@ -1,0 +1,270 @@
+/* 
+    Document   : batcave
+    Created on : Sep 14, 2012, 5:21:25 PM
+    Author     : Andrew Tilisky
+    Description:
+        Purpose of the stylesheet follows.
+*/
+root {
+/*	display: block;
+	z-index: 50;
+	position: absolute;
+	top: 120px;
+	width: 100%;*/
+	
+	max-width:1000px;
+	min-width:1000px;
+	width:1000px;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.left {
+	width: 32%;
+	float: left;
+	text-align: right;
+	margin-right: 10px;
+}
+
+.right {
+	width: 65%;
+	margin-left: 10px;
+}
+
+.header {
+	max-width:1000px;
+	min-width:1000px;
+	width:1000px;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+body {
+	max-width:1000px;
+	min-width:1000px;
+	width:1000px;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.itemdb {
+	text-align: -webkit-center;
+}
+
+.credentialEntry {
+	/* position: absolute; */
+	top: 1em;
+	float:left;
+	padding-right:2em;
+	text-align:right;
+}
+
+.featureheader li {
+	display: inline;
+	list-style-type: none;
+}
+
+.navlist li {
+	background-color: #1f1a17;
+	float: left;
+	width: 10em;
+	height: 2em;
+	padding: 10px 10px 10px 10px;
+	text-align: center;
+	display: inline;
+	list-style-type: none;
+}
+
+.itemlink {
+	text-decoration: none;
+	color: #1f1a17;
+}
+
+.generallinks {
+	font-family: Trajan Pro, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+	font-size: 150%;
+	text-decoration: none;
+	border-color: #d1e7f3;
+	display: inline;
+	padding: 10px 10px;
+	color: white;
+}
+
+span {
+	display: block;
+	padding-bottom: 3em;
+	padding-top: 2em;
+	padding-left: 1em;
+}
+
+h3 {
+	padding-right: 1em;
+	padding-left: 1em;
+	
+	font-family: Trajan Pro, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+	color: #1f1a17;
+}
+
+.cartform {
+	padding-right: 1em;
+	padding-left: 1em;
+	font-size: 24px;
+	margin: 1% 0% 1% 27%;
+	font-family: Trajan Pro, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+	color: #1f1a17;
+}
+
+h2 {
+	padding-right: 1em;
+	padding-left: 1em;
+	font-family: Trajan Pro, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+	color: #1f1a17;
+}
+
+.logo {
+	float: left;
+	padding-right: 5em;
+	padding-left:2em;
+}
+
+td.imgCell {
+	width: 21%;
+}
+
+td {
+	background-color: white;
+	text-align: center;
+	font-family: Trajan Pro, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+	font-size: 100%;
+	color: #1f1a17;
+	border-color: #d1e7f3;
+	padding: 10px 10px;
+}
+
+table {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+.featured {
+	float: none;
+	margin: 0 auto;
+	width: 88%;
+	font-family: Trajan Pro, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+	background-color: #1f1a17;
+	font-size: 150%;
+	padding: 10px 10px 10px 10px;
+	width: 75%;
+	color: white;
+	font-family: Trajan Pro, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+}
+
+.cartTable {
+	float: none;
+	margin: 0 auto;
+	width: 88%;
+	font-family: Trajan Pro, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+	background-color: #1f1a17;
+	font-size: 150%;
+	padding: 10px 10px 10px 10px;
+	width: 49%;
+	color: white;
+	font-family: Trajan Pro, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+}
+
+.signup {
+	float: none;
+	margin: 0 auto;
+	width: 654px;
+	font-family: Trajan Pro, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+	background-color: #1f1a17;
+	font-size: 150%;
+	padding: 10px 10px 40px 10px;
+	color: white;
+	font-family: Trajan Pro, Segoe UI, Tahoma, Arial, Verdana, sans-serif;
+}
+
+.buybutton {
+	padding-left: 8em;
+	list-style-type: none;
+	padding-top: 29em;
+}
+
+.itempic {
+	padding-top: 1em;
+	padding-bottom: 2em;
+}
+
+.cart {
+	/* padding-left: 50em; */
+	/* position: absolute; */
+	top: 13em;
+	float:right;
+	padding-right:3em;
+}
+
+p {
+	display: inline;
+}
+
+.button {
+	float: right;
+	border: 1px solid gainsboro;
+	border-color: rgba(0, 0, 0, .1);
+	color: #444 !important;
+	font-size: 11px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	cursor: default !important;
+	display: inline-block;
+	font-weight: bold;
+	height: 29px;
+	line-height: 29px;
+	min-width: 54px;
+	padding: 0 8px;
+	text-align: center;
+	text-decoration: none !important;
+	margin-right: 1em;
+}
+
+.cartbutton {
+	border: 1px solid gainsboro;
+	border-color: rgba(0, 0, 0, .1);
+	color: #444 !important;
+	font-size: 11px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	cursor: default !important;
+	display: inline-block;
+	font-weight: bold;
+	height: 29px;
+	line-height: 29px;
+	min-width: 54px;
+	padding: 0 8px;
+	text-align: center;
+	text-decoration: none !important;
+	margin-right: 1em;
+}
+
+.signupbutton {
+	float: left;
+	border: 1px solid gainsboro;
+	border-color: rgba(0, 0, 0, .1);
+	color: #444 !important;
+	font-size: 11px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+	cursor: default !important;
+	display: inline-block;
+	font-weight: bold;
+	height: 29px;
+	line-height: 29px;
+	min-width: 54px;
+	padding: 0 8px;
+	text-align: center;
+	text-decoration: none !important;
+	margin-right: 1em;
+}

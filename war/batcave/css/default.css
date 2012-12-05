@@ -1,0 +1,238 @@
+body {
+	background:#E9E9E9 url(background.gif) repeat;
+	color:#333;
+}
+blockquote, pre {
+	background:#F1F1F1;
+	border:#CCC dashed 1px;
+}
+a {
+	color:#3B5998;
+}
+textarea, .textfield {
+	border:1px solid #BDC7D8;
+	padding:3px;
+	font-size:12px;
+}
+.valid {
+	color:#119900;
+}
+.invalid {
+	color:#ff4a00;
+}
+.button {
+	background:#3B5998;
+	border-color:#3B5998 #0E1F5B #0E1F5B #3B5998;
+	color:#FFFFFF;
+}
+.button:hover {
+	background:#3E5383;
+	border-color:#0E1F5B #3B5998 #3B5998 #0E1F5B;
+}
+.sided {
+	background:#FFF;
+	border:1px solid #B7B7B7;
+}
+a .sided:hover {
+	border-color:#666;
+}
+.box .content {
+	background:#F7F7F7;
+}
+.box h3 {
+	color:#3B5998;
+}
+.bottom_separator {
+	border-bottom:1px dashed #CCC;
+}
+
+/* header START */
+#header {
+	border-bottom:1px solid #B7B7B7;
+}
+#header .inner {
+	background:#F7F7F7;
+	border-bottom:1px solid #FFF;
+}
+#header .content h1 {
+	border-left:5px solid #999;
+}
+#header .content h1 a {
+	color:#666;
+	text-decoration:none;
+}
+#header .content h1 a:hover {
+	color:#3B5998;
+}
+#navlist li a {
+	border-color:#D6D6D6;
+}
+#search_textfield {
+	background:#fff url(search_background.gif) no-repeat right;
+	background-position:100% 0% !important;
+	background-position:100%-21px;
+}
+#search_textfield:focus {
+	background-position:100%-21px !important;
+}
+#navlist li a#feed img {
+	background-image:url(feed_switch.gif);
+}
+/* header END */
+
+/* main START */
+#container_body {
+	background:#fff url(content_background.gif) repeat-y top right;
+	border:solid 1px #B7B7B7;
+}
+#container_bottom .postnav {
+	border-top:1px dashed #B7B7B7;
+}
+#container_bottom .anchor span {
+	background:url(go_top.gif) no-repeat left center;
+}
+#notice {
+	border:1px solid #C6C6C6;
+}
+#notice .inner {
+	background:#F4F4F4;
+	border:1px solid #FFF;
+}
+#notice .icon {
+	background:url(notice.gif) no-repeat top left;
+}
+#notice .content .separator {
+	border-right:1px solid #C6C6C6;
+}
+#main {
+	width:619px !important;
+	width:618px;
+}
+.post .title h2 {
+	color:#333;
+	padding-bottom:3px;
+	border-bottom:1px solid #ccc;
+}
+.post .title a {
+	color:#333;
+	text-decoration:none;
+}
+.post .title a:hover {
+	color:#3B5998;
+}
+.post .comments {
+	background:url(comment.gif) no-repeat bottom left;
+}
+/* main END */
+
+/* sidebar START */
+#sidebar {
+	background:#F7F7F7;
+	border-left:1px solid #DDDDDD;
+}
+#sidebar h3, .widget .box {
+	background:#E9E9E9;
+}
+#sidebar a h3 {
+	color:#333;
+}
+#styleswitcher, #sidebar a:hover h3 {
+	background:#d6d6d6;
+}
+#styleswitcher span.color {
+	background:#FFF;
+	border:1px solid #999;
+}
+#styleswitcher #style-white {
+	margin-top:0px;
+}
+#styleswitcher #style-white a img {
+	background:#FFF;
+	width:12px;
+	height:12px;
+}
+.widget ul li {
+	border-bottom:1px solid #eee;
+}
+.widget ul li ul li {
+	border-top:1px solid #eee;
+}
+.sidedate {
+	color:#999;
+}
+/* sidebar END */
+
+/* footer START */
+#footer {
+	border-top:1px solid #B7B7B7;
+}
+#footer .inner {
+	background:#F7F7F7;
+	border-top:1px solid #FFF;
+}
+/* footer END */
+
+/* comments START */
+#commentlist ol li {
+	border:1px solid #BDC7D8;
+	padding:1px;
+}
+.userinfo {
+	background:#F7F7F7;
+}
+.userinfo .userpic {
+	background-color:#fff;
+	border:1px solid #B7B7B7;
+}
+#comments_rss {
+	background:url(feed.gif) no-repeat top left;
+}
+/* comments END */
+
+/* image switcher START */
+.imageswitcher {
+	background:#EEE;
+}
+.imageswitcher_image {
+	background:#FFF;
+	border:1px solid #999;
+}
+a .imageswitcher_image:hover {
+	border-color:#666;
+}
+a.imageswitcher_button {
+	background:#AAA;
+	border:1px solid #999;
+	color:#FFF;
+}
+a.imageswitcher_button:hover {
+	background:#425D9C;
+	border-color:#3D5290;
+}
+/* image switcher END */
+
+/* wp-pagenavi START */
+.wp-pagenavi a:hover {
+	background:#E9E9E9;
+}
+.wp-pagenavi span.current {
+	background:#F7F7F7;
+}
+/* wp-pagenavi END */
+
+/* wp-recentcomments START */
+.rc_item .rc_avatar img {
+	background:#FFF;
+	border-color:#B7B7B7;
+}
+/* wp-recentcomments END */
+
+/* wp-syntax START */
+.wp_syntax {
+	background:#F9F9F9;
+	border:1px solid #CCC;
+}
+.wp_syntax .line_numbers {
+	background:#E9E9E9;
+}
+/* wp-syntax END */
