@@ -2,49 +2,66 @@ package com.batman.data.items;
 
 import java.io.Serializable;
 
-public class Item implements Serializable{
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import com.google.appengine.api.datastore.Key;
 
-	/**
+@Entity
+public class Item implements Serializable {
+
+    /**
 	 * 
 	 */
-	private static final long serialVersionUID = 3988693624717198312L;
-	
-	private String guid;
-	private String name;
-	private String image;
-	private Double price;
+    private static final long serialVersionUID = 3988693624717198312L;
 
-	// accessors
-	public void setGuid(String guid) {
-		this.guid = guid;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Key key;
+    private String GUID;
+    private String Name;
+    private String Image;
+    private Double Price;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    // mutators
+    public Key getKey() {
+	return this.key;
+    }
 
-	public void setImage(String image) {
-		this.image = image;
-	}
+    public void setKey(Key key) {
+	this.key = key;
+    }
 
-	public void setPrice(Double price) {
-		this.price = price;
-	}
+    public void setGuid(String guid) {
+	this.GUID = guid;
+    }
 
-	// mutators
-	public String getGuid() {
-		return this.guid;
-	}
+    public void setName(String name) {
+	this.Name = name;
+    }
 
-	public String getName() {
-		return this.name;
-	}
+    public void setImage(String image) {
+	this.Image = image;
+    }
 
-	public String getImage() {
-		return this.image;
-	}
+    public void setPrice(Double price) {
+	this.Price = price;
+    }
 
-	public Double getPrice() {
-		return this.price;
-	}
+    public String getGuid() {
+	return this.GUID;
+    }
+
+    public String getName() {
+	return this.Name;
+    }
+
+    public String getImage() {
+	return this.Image;
+    }
+
+    public Double getPrice() {
+	return this.Price;
+    }
 }

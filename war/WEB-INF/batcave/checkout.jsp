@@ -8,10 +8,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
 <body>
-<%@ include file="header.jsp"%>
-<span>
-Checkout!
-</span>
-<%@ include file="footer.html"%>
-</body>
-</html>
+	<%@ include file="header.jsp"%>
+	<span> Checkout! </span>
+	<%@ include file="footer.html"%>

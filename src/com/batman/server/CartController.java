@@ -16,45 +16,66 @@ import com.batman.server.cart.DisplayItem;
 import com.batman.server.cart.ShoppingCart;
 
 public class CartController extends HttpServlet {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 4884186937937467559L;
-	
-	private final static Logger log = Logger.getLogger(CartController.class.getName(), null);
-	
-	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		log.info("doGet");
-		// Retrieve the current session from the request
-		HttpSession session = request.getSession();
-		
-		// Get the items back out of the session
-		ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
-		List<DisplayItem> displayItems = new ArrayList<DisplayItem>();
-		
-		// Populate the display items list with the count and name of the items in the cart
-		Map<String, Integer> cartCounts = cart.getCounts();
-		for(Map.Entry<String, Integer> entry : cartCounts.entrySet()){
-			String guid = entry.getKey();
-			Integer count = entry.getValue();
-			DisplayItem displayItem = new DisplayItem();
-			displayItem.setCount(Integer.toString(count));
-			displayItem.setName(cart.lookupItem(guid).getName());
-			displayItems.add(displayItem);
-		}
-		
-		// Send the display items back to the page
-		request.setAttribute("displayItems", displayItems);
-		
-		// Go back to the page
-		request.getRequestDispatcher("/WEB-INF" + request.getServletPath() + ".jsp").forward(request, response);
+    private static final long serialVersionUID = 4884186937937467559L;
+
+    private final static Logger log = Logger.getLogger(
+	    CartController.class.getName(), null);
+
+    protected void doGet(HttpServletRequest request,
+	    HttpServletResponse response) throws ServletException, IOException {
+	log.info("doGet");
+
+	// Retrieve the current session from the request
+	HttpSession session = request.getSession();
+
+	// Get the items back out of the session
+	ShoppingCart cart = (ShoppingCart) session.getAttribute("cart");
+
+	if (null == cart)
+	    cart = new ShoppingCart();
+
+	List<DisplayItem> displayItems = new ArrayList<DisplayItem>();
+
+	// Populate the display items list with the count and name of the items
+	// in the cart
+
+	try {
+	    Map<String, Integer> cartCounts = cart.getCounts();
+
+	    log.info(cartCounts.size() + " counts");
+
+	    for (Map.Entry<String, Integer> entry : cartCounts.entrySet()) {
+		String guid = entry.getKey();
+		Integer count = entry.getValue();
+
+		DisplayItem displayItem = new DisplayItem();
+		displayItem.setCount(Integer.toString(count));
+		displayItem.setName(cart.lookupItem(guid).getName());
+		displayItem.setImage(cart.lookupItem(guid).getImage());
+		displayItem.setPrice(cart.lookupItem(guid).getPrice());
+		displayItems.add(displayItem);
+	    }
+	} catch (NullPointerException nullPtEx) {
+	    log.severe("nothing has been added to the cart");
 	}
-	
-	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		log.info("doPost");
-		// Go back to the page
-		request.getRequestDispatcher("/WEB-INF" + request.getServletPath() + ".jsp").forward(request, response);
-	}
+
+	log.info(displayItems.size() + " items in cart");
+
+	// Send the display items back to the page
+	request.setAttribute("displayItems", displayItems);
+
+	// Go back to the page
+	request.getRequestDispatcher(
+		"/WEB-INF" + request.getServletPath() + ".jsp").forward(
+		request, response);
+    }
+
+    protected void doPost(HttpServletRequest request,
+	    HttpServletResponse response) throws ServletException, IOException {
+	log.info("doPost");
+	// Go back to the page
+	request.getRequestDispatcher(
+		"/WEB-INF" + request.getServletPath() + ".jsp").forward(
+		request, response);
+    }
 }
